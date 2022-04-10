@@ -5,7 +5,7 @@ import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react'
 import Amplify from 'aws-amplify';
 import aws_exports from './aws-exports';
 Amplify.configure(aws_exports);
-
+//https://docs.amplify.aws/start/getting-started/installation/q/integration/react/
 class App extends Component {
   render() {
     return (
@@ -25,6 +25,15 @@ class App extends Component {
             Learn React
           </a>
         </header>
+        
+        <form onSubmit={this.handleSubmit}>
+          <label>
+          Name:
+          <input type="text" value={this.state.value} onChange={this.handleChange} />
+          </label>
+          <input type="submit" value="Submit" />
+        </form>
+        
       </div>
     );
   }
